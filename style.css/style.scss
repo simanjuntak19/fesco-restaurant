@@ -2,9 +2,16 @@
 // font-family: 'Oswald', sans-serif;
 @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
 // font-family: 'Satisfy', cursive;
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap');
+// font-family: 'PT Sans Narrow', sans-serif;
+
+
 
 $gold : rgb(231, 190, 114);
+$darkgold : #D5AD18;
+$browngold : #BF9E79;
 $blue: #151724;
+$lightgrey : rgb(241, 241, 241);
 
 
 @mixin center {
@@ -66,7 +73,7 @@ $blue: #151724;
 }
 
 
-// Adjust margin for small screen
+// Adjust nav margin for small screen
 @media screen and (max-width:768px){
     .navbar .collapse a{
         margin-left: 0;
@@ -132,4 +139,154 @@ $blue: #151724;
 }
 
 
+@media screen and (max-width:576px){
+    .header-content h1{
+        font-size: 45px;
+    }
+}
 
+// About Us Section
+
+
+// About us section
+.about-us-section{
+    padding: 60px 0 100px;
+    background-color: $lightgrey;
+    .container{
+        position: relative;
+    }
+}
+
+.about-us-text{
+    text-align: center;
+    padding: 0 20px;
+
+    h1{
+        font-family: 'Satisfy', cursive;
+        font-size: 50px;
+        font-weight: 600;
+        color: $browngold;
+        margin-bottom: 25px;
+    }
+
+    p{
+        line-height: 40px;
+        font-family: 'PT Sans Narrow', sans-serif;
+        font-size: 16px;
+        color: #2e2e2e;
+    }
+ 
+}
+
+// Contact Us 
+.contact-us{
+    padding: 0 30px;
+    position: absolute;
+    right: -30px;
+    top: -250px;
+}
+
+
+// Kalau screen kecil flownya jadi ke bawah
+@media screen and (max-width:768px){
+    .contact-us{
+        position: static;
+    }
+}
+
+@media screen and (max-width:992px){
+    .contact-us{
+        top: -180px;
+    }
+}
+
+
+
+// Contact Us Text
+.contact-us-text{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 15px;
+    color : #ffffff;
+    background: $blue;
+    padding: 30px;
+    line-height: 15px;
+
+    p:nth-child(5), p:nth-child(9){
+        margin-top: -10px;
+        
+    }
+
+    p:nth-child(4), p:nth-child(8){
+        margin-top: -5px;
+    }
+
+    p:nth-child(3), p:nth-child(7){
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    h4{
+        color: $browngold;
+        font-size: 26px;
+    }
+
+    a{
+        display: inline-block;
+        color: $browngold;
+        padding-bottom: 3px;
+        margin-bottom: 10px;
+        // Untuk membuat border transparan, kalau gk ada ini saat di hover nanti tingginya berubah
+        border-bottom: 1px solid rgba(0,0,0,0);
+        &:hover{
+            text-decoration: none;
+            border-bottom: 1px solid $browngold;
+        }
+    }
+
+    .reservation-btn{
+        text-align: center;
+        button{
+            padding: 15px 20px;
+            background: none;
+            border: 2px solid $browngold;
+            color: #ffffff;
+            margin-top: 15px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            &:hover{
+                background: $browngold;
+                color: $blue;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+// Contact us image
+.contact-us-image{
+    margin-top:40px;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and  (max-width:578px){
+    .about-us-section{
+        padding-bottom: 60px;
+    }
+
+    // .contact-us-image{
+    //     height: auto;
+    // }
+}
+
+@media screen and  (max-width:992px){
+    .contact-us-image{
+        height: auto;
+    }
+}
